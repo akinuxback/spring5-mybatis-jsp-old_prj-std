@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="aki.product.mapper.ProductFileMapper">
+
+<!-- CREATE -->
+<insert id="insert">
+	insert into tbl_product_file(pno, upload_path, uuid, file_name, image, main, filecallpath)
+		values(#{pno}, #{upload_path}, #{uuid}, #{file_name}, #{image}, #{main}, #{fileCallPath})
+</insert>
+
+
+<!-- READ 단일 레코드 -->
+<!-- READ -->
+<select id="select" resultType="aki.product.domain.ProductFileDTO">
+	select * from tbl_product_file where pno = #{pno} and main = 1
+</select>
+
+<!-- READ -->
+<select id="findByPno" resultType="aki.product.domain.ProductFileDTO">
+	select * from tbl_product_file where pno = #{pno}
+</select>
+
+
+<!-- UPDATE 이건 쓸일이 없나?? modify 페이지 에서도 전체 딜리트 하고 새로 인서트 하고 있음 -->
+<update id="update">
+	update tbl_product_file
+	set
+	upload_path = #{upload_path},
+	uuid = #{uuid},
+	file_name = #{file_name},
+	image = #{image},
+	main = #{main}
+	where pno = #{pno} and main = 1
+</update>
+
+
+<!-- DELETE -->
+<delete id="deleteByUUID">
+	delete from tbl_product_file where uuid = #{uuid}
+</delete>
+
+<delete id="deleteByPNO">
+	delete from tbl_product_file where pno = #{pno}
+</delete>
+
+
+</mapper>

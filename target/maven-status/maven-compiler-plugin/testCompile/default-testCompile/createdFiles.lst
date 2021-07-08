@@ -1,0 +1,6 @@
+aki\product\persistence\DataSourceTests.class
+aki\product\mapper\ProductMapperTests.class
+aki\product\mapper\ProductFileMapperTests.class
+aki\product\persistence\JDBCTests.class
+aki\product\mapper\ReplySecondMapperTests.class
+aki\product\mapper\ReplyMapperTests.class

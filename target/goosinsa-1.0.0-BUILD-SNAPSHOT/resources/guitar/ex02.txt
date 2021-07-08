@@ -1,0 +1,59 @@
+  <li class="media list-group-item">
+    <a class="pull-left" href="#">
+      <img class="media-object img-circle" src="/resources/img/boa.jpg" alt="profile" style="float:left;">
+    </a>
+    <div class="media-body" style="margin-left:10%">
+      <div class="well well-lg">
+          <h4 class="media-heading text-uppercase reviews">Marco </h4>
+          <ul class="media-date text-uppercase reviews list-inline">
+            <li>2020/12/07</li>
+          </ul>
+          <p class="media-comment">
+            Great snippet! Thanks for sharing.
+          </p>
+          <a class="btn btn-info btn-circle text-uppercase" href="#" id="like"><span class="glyphicon glyphicon-share-alt"></span> Like : </a>
+          <a class="btn btn-info btn-circle text-uppercase" href="#" id="reply" data-toggle="collapse" data-target="#largeComment" ><span class="glyphicon glyphicon-share-alt"></span> Reply</a>
+          <a class="btn btn-warning btn-circle text-uppercase" data-toggle="collapse" href="#replyOne"><span class="glyphicon glyphicon-comment"></span> 2 comments</a>
+      </div>              
+    </div>
+    <div class="collapse" id="largeComment">
+    	<div class="well well-lg"><!-- comment -->
+        	<form action="#" method="post" class="form-horizontal" id="commentForm" role="form"> 
+                <div class="form-group">
+                    <label for="email" class="col-sm-2 control-label">Comment</label>
+                    <div class="well-lg">
+                      <textarea class="form-control" name="addComment" id="addComment" rows="2"></textarea>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">                    
+                        <button class="btn btn-success btn-circle text-uppercase" type="submit" id="submitComment"><span class="glyphicon glyphicon-send"></span> Summit comment</button>
+                    </div>
+                </div>            
+            </form>
+        </div><!-- end comment -->
+    </div>
+    <div class="collapse" id="replyOne">
+        <ul class="media-list replyList">
+            <li class="media media-replied">
+                <a class="pull-left" href="#">
+                  <img class="media-object img-circle" src="/resources/img/boa.jpg" alt="profile">
+                </a>
+                <div class="media-body">
+                  <div class="well well-lg">
+                      <h4 class="media-heading text-uppercase reviews"><span class="glyphicon glyphicon-share-alt"></span> The Hipster</h4>
+                      <ul class="media-date text-uppercase reviews list-inline">
+                        <li>2020/12/07</li>
+                      </ul>
+                      <p class="media-comment">
+                        Nice job Maria.
+                      </p>
+                      <a class="btn btn-info btn-circle text-uppercase" href="#" id="reply"><span class="glyphicon glyphicon-share-alt"></span> Like : </a>
+                      <a class="btn btn-info btn-circle text-uppercase" href="#" id="reply"><span class="glyphicon glyphicon-share-alt"></span> Reply</a>
+                  </div>              
+                </div>
+            </li>
+         </ul>  
+    </div>
+  </li>  <!-- end 댓글 -->        
+  

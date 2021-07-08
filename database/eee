@@ -1,0 +1,20 @@
+select
+	a.* 
+from 
+	(
+		select 
+			/*+INDEX_DESC(tbl_reply idx_reply) */
+			rownum rn, a.*
+		from
+			TBL_REPLY a
+		where
+			pno = 48
+			and	rno > 0
+			and rownum  <= 20
+	)
+	
+	a
+where
+	rn > 10 
+	
+	
